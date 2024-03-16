@@ -1,0 +1,2019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <com.blazemeter.jmeter.RandomCSVDataSetConfig guiclass="com.blazemeter.jmeter.RandomCSVDataSetConfigGui" testclass="com.blazemeter.jmeter.RandomCSVDataSetConfig" testname="bzm - Random CSV Data Set Config">
+        <stringProp name="filename">..\CSV-File\CSV-File Users for Ilshat.csv</stringProp>
+        <stringProp name="fileEncoding">UTF-8</stringProp>
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="variableNames">username,password</stringProp>
+        <boolProp name="randomOrder">false</boolProp>
+        <boolProp name="ignoreFirstLine">true</boolProp>
+        <boolProp name="rewindOnTheEndOfList">true</boolProp>
+        <boolProp name="independentListPerThread">false</boolProp>
+      </com.blazemeter.jmeter.RandomCSVDataSetConfig>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <collectionProp name="DNSCacheManager.hosts"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+        <stringProp name="CookieManager.policy">compatibility</stringProp>
+      </CookieManager>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate, br</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept-Language</stringProp>
+            <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0</stringProp>
+          </elementProp>
+          <elementProp name="X-Requested-With" elementType="Header">
+            <stringProp name="Header.name">X-Requested-With</stringProp>
+            <stringProp name="Header.value">XMLHttpRequest</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Length</stringProp>
+            <stringProp name="Header.value">45</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Connection</stringProp>
+            <stringProp name="Header.value">keep-alive</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Origin</stringProp>
+            <stringProp name="Header.value">https://fvd.ru</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Referer</stringProp>
+            <stringProp name="Header.value">https://fvd.ru/</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+            <stringProp name="Header.value">empty</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+            <stringProp name="Header.value">cors</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+            <stringProp name="Header.value">same-origin</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Connection</stringProp>
+            <stringProp name="Header.value">keep-alive</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Host</stringProp>
+            <stringProp name="Header.value">fvd.ru</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">DNT</stringProp>
+            <stringProp name="Header.value">1</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="Threads" elementType="Argument">
+            <stringProp name="Argument.name">Threads</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Number of Threads (users): Thread Group</stringProp>
+          </elementProp>
+          <elementProp name="RampUp" elementType="Argument">
+            <stringProp name="Argument.name">RampUp</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Ramp-Up Period (In seconds): Thread Group</stringProp>
+          </elementProp>
+          <elementProp name="LoopCount" elementType="Argument">
+            <stringProp name="Argument.name">LoopCount</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.desc">Loop Count: Thread Group</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">fvd.ru</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Server Name or IP: RequestHost</stringProp>
+          </elementProp>
+          <elementProp name="Random_goods_M" elementType="Argument">
+            <stringProp name="Argument.name">Random_goods_M</stringProp>
+            <stringProp name="Argument.value">${__Random(1,3)}</stringProp>
+            <stringProp name="Argument.desc">Выбор товара M раз, где M - количество от 1 до M</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="selectedItemsCounter" elementType="Argument">
+            <stringProp name="Argument.name">selectedItemsCounter</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Счетчик итераций по дабавлению id товара в корзину</stringProp>
+          </elementProp>
+          <elementProp name="Random_del_goods_N" elementType="Argument">
+            <stringProp name="Argument.name">Random_del_goods_N</stringProp>
+            <stringProp name="Argument.value">${__Random(1,2)}</stringProp>
+            <stringProp name="Argument.desc">Удаление товара N раз, где N - количество от 1 до N</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="selectedItemsCounter_del" elementType="Argument">
+            <stringProp name="Argument.name">selectedItemsCounter_del</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Счетчик итераций по удалению id товара из корзины</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/AgrRep.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="SDW_All_requests">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/SDW_All_requests.xml</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="SDW_Errors">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/SDW_Errors.xml</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/AsertRes.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/log1.active_threads.csv</stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/log2.response_times.csv</stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/log3.transactions_per_sec.csv</stringProp>
+        <longProp name="interval_grouping">1000</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG_DEBUG_X2.fvd.ru" enabled="false">
+        <stringProp name="ThreadGroup.num_threads">${Threads}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RampUp}</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">${LoopCount}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_dbg_UC02_fvd.ru">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_1.LogOn" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="-1303224487">TF_1.LogOn</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-01.Main page, извлечение id товара" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="-1011934223">TF_2-01.Main page</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; M" enabled="true">
+            <stringProp name="WhileController.condition">${__groovy((vars.get(&quot;selectedItemsCounter&quot;) as int) &lt; (vars.get(&quot;Random_goods_M&quot;) as int))}</stringProp>
+            <stringProp name="TestPlan.comments">Выполняется пока счетчик &lt; Random_goods_M</stringProp>
+          </WhileController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_2-03_selectedItemsCounter" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">//log.info(&quot;Значение selectedItemsCounter_0: &quot; + vars.get(&quot;selectedItemsCounter&quot;));
+def selectedItemsCounter = (vars.get(&quot;selectedItemsCounter&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;)) + 1;
+//selectedItemsCounter - Счетчик итераций по дабавлению id товара в корзину
+
+//log.info(&quot;Значение selectedItemsCounter_1: &quot; + selectedItemsCounter);
+
+vars.put(&quot;selectedItemsCounter&quot;, selectedItemsCounter as String);
+
+//log.info(&quot;Значение selectedItemsCounter_0: &quot; + vars.get(&quot;selectedItemsCounter&quot;));
+
+def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;));
+log.info(counter + &quot;-я итерация по дабавлению id товара в корзину ---&quot;)</stringProp>
+              <stringProp name="TestPlan.comments">Счетчик итераций по дабавлению id товара в корзину</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_2-03_Выбор id_goods" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;));
+
+log.info(counter + &quot;-------- Значение selectedItemsCounter --------&quot; + counter)
+// Получаем значение переменной id_goods_buy_mp_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;id_goods_buy_mp_matchNr&quot;)
+log.info(&quot;| Значение переменной id_goods_buy_mp_matchNr=&quot; + matchNr)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной id_goods_buy_mp_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+//def random = new Random()
+//def randomValue = minRandomValue + random.nextInt(maxRandomValue)
+def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
+log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+
+// Получаем значение переменной id_goods_buy_mp_N, где N - сгенерированное случайное число
+def id_goods = vars.get(&quot;id_goods_buy_mp_&quot; + String.valueOf(randomValue))
+log.info(&quot;| Значение переменной id_goods_buy_mp_&quot; + randomValue + &quot;: &quot; + id_goods)
+log.info(counter + &quot;-------- Значение selectedItemsCounter --------&quot; + counter)
+
+vars.put(&quot;id_goods&quot;, id_goods as String);
+vars.put(&quot;counter&quot;, counter as String);</stringProp>
+              <stringProp name="TestPlan.comments">метод org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-03.Кнопка Купить, добавить M id в корзину" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="577043892">TF_2-03.Кнопка Купить, добавить id в корзину</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+          </hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_3-01.Перейти в корзину" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="104885329">TF_3.Перейти в корзину</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; N" enabled="true">
+            <stringProp name="WhileController.condition">${__groovy((vars.get(&quot;selectedItemsCounter_del&quot;) as int) &lt; (vars.get(&quot;Random_del_goods_N&quot;) as int))}</stringProp>
+            <stringProp name="TestPlan.comments">Выполняется пока счетчик &lt; Random_del_goods_N</stringProp>
+          </WhileController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03_selectedItemsCounter_del" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">//log.info(&quot;Значение selectedItemsCounter_del_0: &quot; + vars.get(&quot;selectedItemsCounter_del&quot;));
+def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
+//selectedItemsCounter_del - Счётчик итераций по удалению id товара из корзины
+
+//log.info(&quot;Значение selectedItemsCounter_del_1: &quot; + selectedItemsCounter_del);
+
+vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);
+
+//log.info(&quot;Значение selectedItemsCounter_del_0: &quot; + vars.get(&quot;selectedItemsCounter_del&quot;));
+
+//int counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+//log.info(&quot;Значение selectedItemsCounter_del: &quot; + counter_del);
+
+def counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+log.info(counter_del + &quot;-я итерация по удалению id товара из корзины ---&quot;)
+
+//def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 0 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
+//vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);
+
+
+//def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+//log.info(counter + &quot;-------------------------------------------------&quot;)</stringProp>
+              <stringProp name="TestPlan.comments">Счётчик итераций по удалению id товара из корзины</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03-1_ counter_befo_del" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// Первый блок кода (JSR223 Sampler) - объявление значения переменной &quot;id_goods_basket_befo_del_matchNr&quot;
+def id_goods_basket_befo_del_matchNr = 
+(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) == null) ? 
+    vars.get(&quot;del_basket_id_matchNr&quot;) : 
+    Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;)) - 1;
+
+vars.put(&quot;id_goods_basket_befo_del_matchNr&quot;, id_goods_basket_befo_del_matchNr as String);
+
+
+
+def counter_befo = Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;));
+log.info(counter_befo + &quot; ----------------------------------------------&quot;)
+</stringProp>
+              <stringProp name="TestPlan.comments">Счётчик остатка товара в корзине перед итерацией удаления id товара из корзины</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_ counter_befo" enabled="false">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// Объявляем переменные
+def id_goods_basket_befo_del_matchNr;
+//def del_basket_id_matchNr;
+
+// Пытаемся получить значения переменных из глобального контекста JMeter
+try {
+    id_goods_basket_befo_del_matchNr = vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;);
+    del_basket_id_matchNr = vars.get(&quot;del_basket_id_matchNr&quot;);
+    id_goods_basket_after_del_matchNr = vars.get(&quot;id_goods_basket_after_del_matchNr&quot;);
+} catch (Exception e) {
+    log.error(&quot;An error occurred while trying to get variable values: &quot; + e);
+}
+
+// Проверяем тип переменной id_goods_basket_befo_del_matchNr
+if (id_goods_basket_befo_del_matchNr instanceof String) {
+    // Если переменная существует и имеет тип String, преобразуем ее значение в число
+    id_goods_basket_befo_del_matchNr = id_goods_basket_befo_del_matchNr != null ? Integer.parseInt(id_goods_basket_befo_del_matchNr) : 0;
+} else {
+    log.error(&quot;id_goods_basket_befo_del_matchNr is not a valid string&quot;);
+}
+
+// JSR223 Sampler для удаления элемента из корзины
+// Получаем значение переменной id_goods_basket_befo_del_matchNr из переменной del_basket_id_matchNr, если первая не существует
+def id_goods_basket_befo_del_matchNr = vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) ?: vars.get(&quot;del_basket_id_matchNr&quot;);
+// Проверяем наличие переменной del_basket_id_matchNr перед использованием
+if (vars.get(&quot;del_basket_id_matchNr&quot;) != null) {
+    // Если переменная del_basket_id_matchNr существует, устанавливаем значение переменной id_goods_basket_befo_del_matchNr
+    vars.put(&quot;id_goods_basket_befo_del_matchNr&quot;, id_goods_basket_befo_del_matchNr as String);
+
+    // Получаем числовое значение из переменной id_goods_basket_befo_del_matchNr и выводим в лог
+    def counter_befo = Integer.parseInt(id_goods_basket_befo_del_matchNr);
+    log.info(counter_befo + &quot;-------------------------------------------------&quot;);
+</stringProp>
+              <stringProp name="TestPlan.comments">??? элементы синтаксиса кода Groovy на изучение ??? </stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03_Выбор del_basket_id" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">//def counter_del = vars.get(&quot;selectedItemsCounter_del&quot;)
+def counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+
+//int counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+//log.info(&quot;Значение selectedItemsCounter_del: &quot; + counter_del);
+
+log.info(counter_del + &quot;------ Значение selectedItemsCounter_del ------&quot; + counter_del)
+// Получаем значение переменной del_basket_id_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;del_basket_id_matchNr&quot;)
+log.info(&quot;| Значение переменной del_basket_id_matchNr=&quot; + matchNr)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной del_basket_id_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+//def random = new Random()
+//def randomValue = minRandomValue + random.nextInt(maxRandomValue)
+def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
+log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+
+// Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число
+def del_basket_id = vars.get(&quot;del_basket_id_&quot; + String.valueOf(randomValue))
+log.info(&quot;| Значение переменной del_basket_id_&quot; + randomValue + &quot;: &quot; + del_basket_id)
+log.info(counter_del + &quot;------ Значение selectedItemsCounter_del ------&quot; + counter_del)
+
+vars.put(&quot;del_basket_id&quot;, del_basket_id as String);
+vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
+              <stringProp name="TestPlan.comments">Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_4-03.Удалить N id из корзины" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="1424818348">TF_4-03.Удалить N id товара из корзины</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+          </hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_5.LogOut" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="931020944">TF_5.LogOut</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TG_DEBUG_X1.fvd.ru" enabled="false">
+        <stringProp name="ThreadGroup.num_threads">${Threads}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RampUp}</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">${LoopCount}</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_dbg_UC01_fvd.ru">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_1.LogOn" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="-1303224487">TF_1.LogOn</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-01.Main page, извлечение id товара" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="-1011934223">TF_2-01.Main page</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="false">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">log.info(&quot;--------------------------------------------------&quot;)
+// Получаем значение переменной id_goods_buy_mp_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;id_goods_buy_mp_matchNr&quot;)
+log.info(&quot;| Значение переменной id_goods_buy_mp_matchNr=&quot; + matchNr)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной id_goods_buy_mp_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+def random = new Random()
+def randomValue = minRandomValue + random.nextInt(maxRandomValue)
+log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+
+// Получаем значение переменной id_goods_buy_mp_N, где N - сгенерированное случайное число
+def id_goods = vars.get(&quot;id_goods_buy_mp_&quot; + String.valueOf(randomValue))
+log.info(&quot;| Значение переменной id_goods_buy_mp_&quot; + randomValue + &quot;: &quot; + id_goods)
+log.info(&quot;--------------------------------------------------&quot;)
+
+vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
+            <stringProp name="TestPlan.comments"> метод random.nextInt от 1 (включительно) до maxRandomValue (включительно)</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-02.Кнопка купить" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="1271208750">TF_2-02.Кнопка купить</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler метод by Ilshat" enabled="false">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">//{&quot;strID&quot;:${id_goods_buy_mp_${__Random(1,${__int(${id_goods_buy_mp_matchNr})})}},&quot;strCOMP&quot;:&quot;&quot;,&quot;strIDSTORE&quot;:&quot;&quot;}
+//
+log.info(&quot;-------------------------------&quot;)
+def qwe = vars.get(&quot;id_goods_buy_mp_1&quot;)
+log.info(qwe)
+//
+def ewq = vars.get(&quot;id_goods_buy_mp_matchNr&quot;)
+log.info(ewq)
+//
+def int zzz = ${__Random(1,17,)}
+log.info(String.valueOf(zzz))
+//
+//def xxx = vars.get(&quot;id_goods_buy_mp_&quot; + String.valueOf(zzz))
+//log.info(String.valueOf(xxx))
+//
+def aaa = org.apache.commons.lang3.RandomUtils.nextInt(1, ewq.toInteger());
+log.info(String.valueOf(aaa))
+//
+def xxx = vars.get(&quot;id_goods_buy_mp_&quot; + String.valueOf(aaa))
+log.info(String.valueOf(xxx))
+
+
+</stringProp>
+            <stringProp name="TestPlan.comments">метод org.apache.commons.lang3.RandomUtils.nextInt</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler метод by Ilshat" enabled="false">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">log.info(&quot;-----------------------------------------------------------&quot;)
+// Получение значения переменной id_goods_buy_mp_1 из переменных (vars)
+def qwe = vars.get(&quot;id_goods_buy_mp_1&quot;)
+log.info(&quot;Значение переменной id_goods_buy_mp_1: &quot; + qwe)
+
+// Получение значения переменной id_goods_buy_mp_matchNr из переменных (vars)
+def ewq = vars.get(&quot;id_goods_buy_mp_matchNr&quot;)
+log.info(&quot;Значение переменной id_goods_buy_mp_matchNr: &quot; + ewq)
+
+// Генерация случайного числа от 1 до значения переменной id_goods_buy_mp_matchNr
+def aaa = org.apache.commons.lang3.RandomUtils.nextInt(1, Integer.parseInt(ewq))
+log.info(&quot;Сгенерированное cлучайное число: &quot; + aaa)
+
+// Получение значения переменной id_goods_buy_mp_N, где N - случайное число
+def id_goods = vars.get(&quot;id_goods_buy_mp_&quot; + String.valueOf(aaa))
+log.info(&quot;Значение переменной id_goods_buy_mp_&quot; + aaa + &quot;: &quot; + id_goods)
+
+
+</stringProp>
+            <stringProp name="TestPlan.comments">метод org.apache.commons.lang3.RandomUtils.nextInt</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="false">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">log.info(&quot;-------------------------------------------------&quot;)
+// Получаем значение переменной id_goods_buy_mp_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;id_goods_buy_mp_matchNr&quot;)
+log.info(&quot;| Значение переменной id_goods_buy_mp_matchNr=&quot; + matchNr)
+
+// Генерируем случайное число в диапазоне от minRandomValue до значения переменной id_goods_buy_mp_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+def random = new Random()
+def randomValue = minRandomValue + random.nextInt(maxRandomValue - minRandomValue + 1)
+log.info(&quot;| Сгенерированное случайное число от &quot; + minRandomValue + &quot; до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+
+// Получаем значение переменной id_goods_buy_mp_N, где N - сгенерированное случайное число
+def id_goods = vars.get(&quot;id_goods_buy_mp_&quot; + String.valueOf(randomValue))
+log.info(&quot;| Значение переменной id_goods_buy_mp_&quot; + randomValue + &quot;: &quot; + id_goods)
+log.info(&quot;-------------------------------------------------&quot;)
+
+vars.put(&quot;id_goods&quot;, id_goods as String); // Добавил для перевода переменной id_goods в контекст JMeter</stringProp>
+            <stringProp name="TestPlan.comments"> метод random.nextInt от minRandomValue до maxRandomValue (включительно оба)</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_3.Перейти в корзину" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="104885329">TF_3.Перейти в корзину</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_4-01.Удалить из корзины id" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="445428912">TF_4-01.Удалить из корзины id</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_4-02.Удалить из корзины All" enabled="false">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="856349547">TF_4-02.Удалить из корзины All</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_5.LogOut" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="931020944">TF_5.LogOut</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="UTG_Test_1">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-1008013735">
+            <stringProp name="49">1</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="0"></stringProp>
+            <stringProp name="48873">180</stringProp>
+            <stringProp name="0"></stringProp>
+          </collectionProp>
+          <collectionProp name="1607589718">
+            <stringProp name="49">1</stringProp>
+            <stringProp name="1722">60</stringProp>
+            <stringProp name="0"></stringProp>
+            <stringProp name="48687">120</stringProp>
+            <stringProp name="0"></stringProp>
+          </collectionProp>
+          <collectionProp name="1963286834">
+            <stringProp name="49">1</stringProp>
+            <stringProp name="48687">120</stringProp>
+            <stringProp name="0"></stringProp>
+            <stringProp name="60">60</stringProp>
+            <stringProp name="0"></stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">0</stringProp>
+        </TestAction>
+        <hashTree>
+          <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer">
+            <intProp name="calcMode">0</intProp>
+            <doubleProp>
+              <name>throughput</name>
+              <value>3.0</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+          </ConstantThroughputTimer>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_dbg_UC01_fvd.ru">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_1.LogOn" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="-1303224487">TF_1.LogOn</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-01.Main page, извлечение id товара" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="-1011934223">TF_2-01.Main page</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-02.Кнопка купить" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="1271208750">TF_2-02.Кнопка купить</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_3.Перейти в корзину" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="104885329">TF_3.Перейти в корзину</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_4-01.Удалить из корзины id" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="445428912">TF_4-01.Удалить из корзины id</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_4-02.Удалить из корзины All" enabled="false">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="856349547">TF_4-02.Удалить из корзины All</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_5.LogOut" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="931020944">TF_5.LogOut</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="UTG_Test_2" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-1008013735">
+            <stringProp name="49">1</stringProp>
+            <stringProp name="0">0</stringProp>
+            <stringProp name="0"></stringProp>
+            <stringProp name="48873">180</stringProp>
+            <stringProp name="0"></stringProp>
+          </collectionProp>
+          <collectionProp name="1607589718">
+            <stringProp name="49">1</stringProp>
+            <stringProp name="1722">60</stringProp>
+            <stringProp name="0"></stringProp>
+            <stringProp name="48687">120</stringProp>
+            <stringProp name="0"></stringProp>
+          </collectionProp>
+          <collectionProp name="1963286834">
+            <stringProp name="49">1</stringProp>
+            <stringProp name="48687">120</stringProp>
+            <stringProp name="0"></stringProp>
+            <stringProp name="60">60</stringProp>
+            <stringProp name="0"></stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">stopthread</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">0</stringProp>
+        </TestAction>
+        <hashTree>
+          <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+            <intProp name="calcMode">0</intProp>
+            <doubleProp>
+              <name>throughput</name>
+              <value>10.0</value>
+              <savedValue>0.0</savedValue>
+            </doubleProp>
+          </ConstantThroughputTimer>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_dbg_UC02_fvd.ru">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_1.LogOn" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="-1303224487">TF_1.LogOn</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-01.Main page, извлечение id товара" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="-1011934223">TF_2-01.Main page</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; M" enabled="true">
+            <stringProp name="WhileController.condition">${__groovy((vars.get(&quot;selectedItemsCounter&quot;) as int) &lt; (vars.get(&quot;Random_goods_M&quot;) as int))}</stringProp>
+            <stringProp name="TestPlan.comments">Выполняется пока счетчик &lt; Random_goods_M</stringProp>
+          </WhileController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_2-03_selectedItemsCounter" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">//log.info(&quot;Значение selectedItemsCounter_0: &quot; + vars.get(&quot;selectedItemsCounter&quot;));
+def selectedItemsCounter = (vars.get(&quot;selectedItemsCounter&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;)) + 1;
+//selectedItemsCounter - Счетчик итераций по дабавлению id товара в корзину
+
+//log.info(&quot;Значение selectedItemsCounter_1: &quot; + selectedItemsCounter);
+
+vars.put(&quot;selectedItemsCounter&quot;, selectedItemsCounter as String);
+
+//log.info(&quot;Значение selectedItemsCounter_0: &quot; + vars.get(&quot;selectedItemsCounter&quot;));
+
+def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;));
+log.info(counter + &quot;-я итерация по дабавлению id товара в корзину ---&quot;)</stringProp>
+              <stringProp name="TestPlan.comments">Счетчик итераций по дабавлению id товара в корзину</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_2-03_Выбор id_goods" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;));
+
+log.info(counter + &quot;-------- Значение selectedItemsCounter --------&quot; + counter)
+// Получаем значение переменной id_goods_buy_mp_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;id_goods_buy_mp_matchNr&quot;)
+log.info(&quot;| Значение переменной id_goods_buy_mp_matchNr=&quot; + matchNr)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной id_goods_buy_mp_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+//def random = new Random()
+//def randomValue = minRandomValue + random.nextInt(maxRandomValue)
+def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
+log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+
+// Получаем значение переменной id_goods_buy_mp_N, где N - сгенерированное случайное число
+def id_goods = vars.get(&quot;id_goods_buy_mp_&quot; + String.valueOf(randomValue))
+log.info(&quot;| Значение переменной id_goods_buy_mp_&quot; + randomValue + &quot;: &quot; + id_goods)
+log.info(counter + &quot;-------- Значение selectedItemsCounter --------&quot; + counter)
+
+vars.put(&quot;id_goods&quot;, id_goods as String);
+vars.put(&quot;counter&quot;, counter as String);</stringProp>
+              <stringProp name="TestPlan.comments">метод org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-03.Кнопка Купить, добавить M id в корзину" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="577043892">TF_2-03.Кнопка Купить, добавить id в корзину</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+          </hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_3-01.Перейти в корзину" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="104885329">TF_3.Перейти в корзину</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; N" enabled="true">
+            <stringProp name="WhileController.condition">${__groovy((vars.get(&quot;selectedItemsCounter_del&quot;) as int) &lt; (vars.get(&quot;Random_del_goods_N&quot;) as int))}</stringProp>
+            <stringProp name="TestPlan.comments">Выполняется пока счетчик &lt; Random_del_goods_N</stringProp>
+          </WhileController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03_selectedItemsCounter_del" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">//log.info(&quot;Значение selectedItemsCounter_del_0: &quot; + vars.get(&quot;selectedItemsCounter_del&quot;));
+def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
+//selectedItemsCounter_del - Счётчик итераций по удалению id товара из корзины
+
+//log.info(&quot;Значение selectedItemsCounter_del_1: &quot; + selectedItemsCounter_del);
+
+vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);
+
+//log.info(&quot;Значение selectedItemsCounter_del_0: &quot; + vars.get(&quot;selectedItemsCounter_del&quot;));
+
+//int counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+//log.info(&quot;Значение selectedItemsCounter_del: &quot; + counter_del);
+
+def counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+log.info(counter_del + &quot;-я итерация по удалению id товара из корзины ---&quot;)
+
+//def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 0 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
+//vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);
+
+
+//def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+//log.info(counter + &quot;-------------------------------------------------&quot;)</stringProp>
+              <stringProp name="TestPlan.comments">Счётчик итераций по удалению id товара из корзины</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03-1_ counter_befo_del" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// Первый блок кода (JSR223 Sampler) - объявление значения переменной &quot;id_goods_basket_befo_del_matchNr&quot;
+def id_goods_basket_befo_del_matchNr = 
+(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) == null) ? 
+    vars.get(&quot;del_basket_id_matchNr&quot;) : 
+    Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;)) - 1;
+
+vars.put(&quot;id_goods_basket_befo_del_matchNr&quot;, id_goods_basket_befo_del_matchNr as String);
+
+
+
+def counter_befo = Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;));
+log.info(counter_befo + &quot; ----------------------------------------------&quot;)
+</stringProp>
+              <stringProp name="TestPlan.comments">Счётчик остатка товара в корзине перед итерацией удаления id товара из корзины</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_ counter_befo" enabled="false">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// Объявляем переменные
+def id_goods_basket_befo_del_matchNr;
+//def del_basket_id_matchNr;
+
+// Пытаемся получить значения переменных из глобального контекста JMeter
+try {
+    id_goods_basket_befo_del_matchNr = vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;);
+    del_basket_id_matchNr = vars.get(&quot;del_basket_id_matchNr&quot;);
+    id_goods_basket_after_del_matchNr = vars.get(&quot;id_goods_basket_after_del_matchNr&quot;);
+} catch (Exception e) {
+    log.error(&quot;An error occurred while trying to get variable values: &quot; + e);
+}
+
+// Проверяем тип переменной id_goods_basket_befo_del_matchNr
+if (id_goods_basket_befo_del_matchNr instanceof String) {
+    // Если переменная существует и имеет тип String, преобразуем ее значение в число
+    id_goods_basket_befo_del_matchNr = id_goods_basket_befo_del_matchNr != null ? Integer.parseInt(id_goods_basket_befo_del_matchNr) : 0;
+} else {
+    log.error(&quot;id_goods_basket_befo_del_matchNr is not a valid string&quot;);
+}
+
+// JSR223 Sampler для удаления элемента из корзины
+// Получаем значение переменной id_goods_basket_befo_del_matchNr из переменной del_basket_id_matchNr, если первая не существует
+def id_goods_basket_befo_del_matchNr = vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) ?: vars.get(&quot;del_basket_id_matchNr&quot;);
+// Проверяем наличие переменной del_basket_id_matchNr перед использованием
+if (vars.get(&quot;del_basket_id_matchNr&quot;) != null) {
+    // Если переменная del_basket_id_matchNr существует, устанавливаем значение переменной id_goods_basket_befo_del_matchNr
+    vars.put(&quot;id_goods_basket_befo_del_matchNr&quot;, id_goods_basket_befo_del_matchNr as String);
+
+    // Получаем числовое значение из переменной id_goods_basket_befo_del_matchNr и выводим в лог
+    def counter_befo = Integer.parseInt(id_goods_basket_befo_del_matchNr);
+    log.info(counter_befo + &quot;-------------------------------------------------&quot;);
+</stringProp>
+              <stringProp name="TestPlan.comments">??? элементы синтаксиса кода Groovy на изучение ??? </stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03_Выбор del_basket_id" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">//def counter_del = vars.get(&quot;selectedItemsCounter_del&quot;)
+def counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+
+//int counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
+//log.info(&quot;Значение selectedItemsCounter_del: &quot; + counter_del);
+
+log.info(counter_del + &quot;------ Значение selectedItemsCounter_del ------&quot; + counter_del)
+// Получаем значение переменной del_basket_id_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;del_basket_id_matchNr&quot;)
+log.info(&quot;| Значение переменной del_basket_id_matchNr=&quot; + matchNr)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной del_basket_id_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+//def random = new Random()
+//def randomValue = minRandomValue + random.nextInt(maxRandomValue)
+def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
+log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+
+// Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число
+def del_basket_id = vars.get(&quot;del_basket_id_&quot; + String.valueOf(randomValue))
+log.info(&quot;| Значение переменной del_basket_id_&quot; + randomValue + &quot;: &quot; + del_basket_id)
+log.info(counter_del + &quot;------ Значение selectedItemsCounter_del ------&quot; + counter_del)
+
+vars.put(&quot;del_basket_id&quot;, del_basket_id as String);
+vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
+              <stringProp name="TestPlan.comments">Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_4-03.Удалить N id из корзины" enabled="true">
+              <collectionProp name="ModuleController.node_path">
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="764597751">Test Plan</stringProp>
+                <stringProp name="1424818348">TF_4-03.Удалить N id товара из корзины</stringProp>
+              </collectionProp>
+            </ModuleController>
+            <hashTree/>
+          </hashTree>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_5.LogOut" enabled="true">
+            <collectionProp name="ModuleController.node_path">
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="764597751">Test Plan</stringProp>
+              <stringProp name="931020944">TF_5.LogOut</stringProp>
+            </collectionProp>
+          </ModuleController>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="-----------------------Test fragments---------------" enabled="false"/>
+      <hashTree/>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_1.LogOn" enabled="false">
+        <stringProp name="TestPlan.comments">Авторизация</stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_1.LogOn">
+          <stringProp name="TestPlan.comments">Авторизация на IShopLogin</stringProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LogOn (HTTP Request)">
+            <stringProp name="TestPlan.comments">Авторизация на странице IShopLogin</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/default.aspx/IShopLogin</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+              <collectionProp name="HTTPFileArgs.files">
+                <elementProp name="No WWW-Authenticate Header is present." elementType="HTTPFileArg">
+                  <stringProp name="File.mimetype">application/octet-stream</stringProp>
+                  <stringProp name="File.path">No WWW-Authenticate Header is present.</stringProp>
+                  <stringProp name="File.paramname"></stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;username&quot;:&quot;${username}&quot;,&quot;password&quot;:&quot;${password}&quot;,&quot;save&quot;:&quot;&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_2-01.Main page" enabled="false">
+        <stringProp name="TestPlan.comments">страница главной страницы</stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_2-01.Main page">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Main page">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <BoundaryExtractor guiclass="BoundaryExtractorGui" testclass="BoundaryExtractor" testname="BE_2-1.Выбор All id_goods с main page" enabled="true">
+              <stringProp name="BoundaryExtractor.useHeaders">false</stringProp>
+              <stringProp name="BoundaryExtractor.refname">id_goods_buy_mp</stringProp>
+              <stringProp name="BoundaryExtractor.lboundary">value=&apos;Купить&apos; onclick=&apos;return buy_click(event,</stringProp>
+              <stringProp name="BoundaryExtractor.rboundary">);&apos;</stringProp>
+              <stringProp name="BoundaryExtractor.default"></stringProp>
+              <boolProp name="BoundaryExtractor.default_empty_value">false</boolProp>
+              <stringProp name="BoundaryExtractor.match_number">-1</stringProp>
+            </BoundaryExtractor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_2-02.Кнопка купить" enabled="false">
+        <stringProp name="TestPlan.comments">Рандомный выбор одного id_goods с main page с помощью кнопки Купить</stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_2-02.Кнопка купить">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_2-02.Выбор id_goods с main page">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">log.info(&quot;--------------------------------------------------&quot;)
+// Получаем значение переменной id_goods_buy_mp_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;id_goods_buy_mp_matchNr&quot;)
+log.info(&quot;| Значение переменной id_goods_buy_mp_matchNr=&quot; + matchNr)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной id_goods_buy_mp_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+def random = new Random()
+def randomValue = minRandomValue + random.nextInt(maxRandomValue)
+log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+
+// Получаем значение переменной id_goods_buy_mp_N, где N - сгенерированное случайное число
+def id_goods = vars.get(&quot;id_goods_buy_mp_&quot; + String.valueOf(randomValue))
+log.info(&quot;| Значение переменной id_goods_buy_mp_&quot; + randomValue + &quot;: &quot; + id_goods)
+log.info(&quot;--------------------------------------------------&quot;)
+
+vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Кнопка Купить (HTTP Request)" enabled="true">
+            <stringProp name="TestPlan.comments">//{&quot;strID&quot;:${id_goods_buy_mp_${__Random(1,${__int(${id_goods_buy_mp_matchNr})})}},&quot;strCOMP&quot;:&quot;&quot;,&quot;strIDSTORE&quot;:&quot;&quot;}
+//</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/advprice/bs.aspx/AddInvoiceID</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;strID&quot;:${id_goods},&quot;strCOMP&quot;:&quot;&quot;,&quot;strIDSTORE&quot;:&quot;&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://${BASE_URL_1}/</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Site" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                  <stringProp name="Header.value">same-origin</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://${BASE_URL_1}</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json; charset=utf-8</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_2-03.Кнопка Купить, добавить id в корзину" enabled="false">
+        <stringProp name="TestPlan.comments">Рандомный выбор id_goods (одного из M) с main page с помощью кнопки Купить</stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_2-03.Добавить id товара из M в корзину" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Кнопка Купить (HTTP Request)" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/advprice/bs.aspx/AddInvoiceID</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;strID&quot;:${id_goods},&quot;strCOMP&quot;:&quot;&quot;,&quot;strIDSTORE&quot;:&quot;&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_3.Перейти в корзину" enabled="false">
+        <stringProp name="TestPlan.comments">Переход на страницу корзины </stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_3-01.Перейти в корзину">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Переход к корзине (HTTP Request)">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/?go=basket</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="MyScriptManager" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">MyScriptManager</stringProp>
+                  <stringProp name="Argument.value">MyPageManager$MyMainPage$ctl02$upBasketFull|MyPageManager$MyMainPage$ctl02$btnRefresh</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="basket_comment" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">basket_comment</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATE" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATE</stringProp>
+                  <stringProp name="Argument.value">7nRXblV9+fn9cnwEO7ZndSK6GBtjiJyEPs/IZlaog/FOleU19zXBlqcx+mJ+k2+sU3LO/G82y0P2bEv7spmAfriQSL1TFaB+T2yNRGFEcWqvTH18IGdBmMJ3y6BeoQNpCXOGzIp1R8JfqXsEFKxznzC388TinUQrpiEuCTzaY8Be9S3VPnKeVqCLk3YUbAMP2soH/kK9R6hCMsIy5JP+lg==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATEGENERATOR" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATEGENERATOR</stringProp>
+                  <stringProp name="Argument.value">CA0B0334</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTTARGET" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__EVENTTARGET</stringProp>
+                  <stringProp name="Argument.value">MyPageManager$MyMainPage$ctl02$btnRefresh</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTARGUMENT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__EVENTARGUMENT</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__ASYNCPOST" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__ASYNCPOST</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Sec-Fetch-Mode" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Mode</stringProp>
+                  <stringProp name="Header.value">cors</stringProp>
+                </elementProp>
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">https://${BASE_URL_1}/?go=basket</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Site" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Site</stringProp>
+                  <stringProp name="Header.value">same-origin</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">https://${BASE_URL_1}</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded; charset=utf-8</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate, br</stringProp>
+                </elementProp>
+                <elementProp name="X-MicrosoftAjax" elementType="Header">
+                  <stringProp name="Header.name">X-MicrosoftAjax</stringProp>
+                  <stringProp name="Header.value">Delta=true</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0</stringProp>
+                </elementProp>
+                <elementProp name="Sec-Fetch-Dest" elementType="Header">
+                  <stringProp name="Header.name">Sec-Fetch-Dest</stringProp>
+                  <stringProp name="Header.value">empty</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <BoundaryExtractor guiclass="BoundaryExtractorGui" testclass="BoundaryExtractor" testname="BE_3-01.Извлечение id товара из корзины (BndExt)" enabled="true">
+              <stringProp name="BoundaryExtractor.useHeaders">false</stringProp>
+              <stringProp name="BoundaryExtractor.refname">id_goods_basket</stringProp>
+              <stringProp name="BoundaryExtractor.lboundary">LoadPreview(event,</stringProp>
+              <stringProp name="BoundaryExtractor.rboundary">,&apos;basket&apos;);</stringProp>
+              <stringProp name="BoundaryExtractor.default">Not_found</stringProp>
+              <boolProp name="BoundaryExtractor.default_empty_value">false</boolProp>
+              <stringProp name="BoundaryExtractor.match_number">-1</stringProp>
+            </BoundaryExtractor>
+            <hashTree/>
+            <BoundaryExtractor guiclass="BoundaryExtractorGui" testclass="BoundaryExtractor" testname="BE_3-1.Извлечение All del_id из корзины" enabled="true">
+              <stringProp name="BoundaryExtractor.useHeaders">false</stringProp>
+              <stringProp name="BoundaryExtractor.refname">del_basket_id</stringProp>
+              <stringProp name="BoundaryExtractor.lboundary">hint=&quot;удалить позицию&quot; onclick=&quot;DelBasketID(event,</stringProp>
+              <stringProp name="BoundaryExtractor.rboundary">)&quot;</stringProp>
+              <stringProp name="BoundaryExtractor.default">Not_found</stringProp>
+              <boolProp name="BoundaryExtractor.default_empty_value">false</boolProp>
+              <stringProp name="BoundaryExtractor.match_number">-1</stringProp>
+            </BoundaryExtractor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_4-01.Удалить из корзины id" enabled="false">
+        <stringProp name="TestPlan.comments">Рандомное удаление одного id товара из корзины</stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_4-01.Удалить из корзины id">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If  Проверка наличия остатка товара &gt; 0" enabled="true">
+            <stringProp name="IfController.condition">${__groovy(${id_goods_basket_matchNr} != 0)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
+            <stringProp name="TestPlan.comments">${id_goods_basket_matchNr}` - это переменная, которая должна содержать числовое значение (например, количество товаров в корзине).
+Операция `${...}` в JMeter используется для извлечения значения переменной из контекста теста.
+
+2. `${__groovy(...)}&apos; - это функция в JMeter, которая позволяет выполнить скрипт на языке Groovy. Функция __groovy принимает выражение на языке Groovy в виде строки и выполняет его.
+
+3. `(${id_goods_basket_matchNr} &gt; 0)` - это условие, которое сравнивает значение переменной id_goods_basket_matchNr с нулем. Если значение переменной больше нуля, условие возвращает true, иначе возвращает false.
+
+Итак, данный код проверяет, больше ли количество товаров в корзине (значение переменной id_goods_basket_matchNr) чем 0. Если это условие истинно, то результатом будет true, что может быть использовано для принятия решений о дальнейших действиях в тест-плане JMeter.</stringProp>
+          </IfController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-01.Выбор del_id из корзины" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">log.info(&quot;--------------------------------------------------&quot;)
+// Получаем значение переменной del_basket_id_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;del_basket_id_matchNr&quot;)
+log.info(&quot;| Значение переменной del_basket_id_matchNr=&quot; + matchNr)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной del_basket_id_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+def random = new Random()
+def randomValue = minRandomValue + random.nextInt(maxRandomValue)
+log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+
+// Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число
+def del_basket_id = vars.get(&quot;del_basket_id_&quot; + String.valueOf(randomValue))
+log.info(&quot;| Значение переменной del_basket_id_&quot; + randomValue + &quot;: &quot; + del_basket_id)
+log.info(&quot;--------------------------------------------------&quot;)
+
+vars.put(&quot;del_basket_id&quot;, del_basket_id as String);</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4-01.Удалить id из корзины (HTTP Request)" enabled="true">
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+              <stringProp name="HTTPSampler.path">/advprice/bs.aspx/Del</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;id&quot;:${del_basket_id}}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_4-02.Удалить из корзины All" enabled="false">
+        <stringProp name="TestPlan.comments">Удаление всех товаров из корзины</stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_4-02.Удалить из корзины All" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4-02.Кнопка Удалить всё (HTTP Request)" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/advprice/bs.aspx/CleanBasket</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_4-03.Удалить N id товара из корзины" enabled="false">
+        <stringProp name="TestPlan.comments">Рандомное удаление id товара (одного из N) из корзины</stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_4-03.Удалить id товара из N в корзине" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Проверка наличия остатка товара &gt; 0" enabled="true">
+            <stringProp name="IfController.condition">${__groovy(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) as int &gt; 0)}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
+            <stringProp name="TestPlan.comments">Проверка наличия остатка товара в корзине перед удалением id товара из корзины</stringProp>
+          </IfController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4-03_Удалить id из корзины (HTTP Request)" enabled="true">
+              <stringProp name="TestPlan.comments">при нажатии кнопки &quot;Х&quot; по строке с id товара в корзине</stringProp>
+              <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+              <stringProp name="HTTPSampler.port">443</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+              <stringProp name="HTTPSampler.path">/advprice/bs.aspx/Del</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">{&quot;id&quot;:${del_basket_id}}</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03-2_ counter_afte_del" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// Второй блок кода (JSR223 Sampler) - обновление значения переменной &quot;id_goods_basket_after_del_matchNr&quot;
+def id_goods_basket_after_del_matchNr = 
+(vars.get(&quot;id_goods_basket_after_del_matchNr&quot;) == null) ? 
+    Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;)) - 1 : 
+    Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;)) - 1;
+
+vars.put(&quot;id_goods_basket_after_del_matchNr&quot;, id_goods_basket_after_del_matchNr as String);
+
+
+def counter_after = Integer.parseInt(vars.get(&quot;id_goods_basket_after_del_matchNr&quot;));
+log.info(counter_after + &quot; -----------------------------------------------&quot;)</stringProp>
+              <stringProp name="TestPlan.comments">Счётчик остатка товара в корзине после итерацией удаления id товара из корзины</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_ counter_afte" enabled="false">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// Объявляем переменные
+//def del_basket_id_matchNr;
+def id_goods_basket_after_del_matchNr;
+
+// Пытаемся получить значения переменных из глобального контекста JMeter
+try {
+    //id_goods_basket_befo_del_matchNr = vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;);
+    //del_basket_id_matchNr = vars.get(&quot;del_basket_id_matchNr&quot;);
+    id_goods_basket_after_del_matchNr = vars.get(&quot;id_goods_basket_after_del_matchNr&quot;);
+} catch (Exception e) {
+    log.error(&quot;An error occurred while trying to get variable values: &quot; + e);
+}
+
+// Проверяем тип переменной id_goods_basket_after_del_matchNr
+    if (id_goods_basket_after_del_matchNr instanceof String) {
+        // Если переменная существует и имеет тип String, преобразуем ее значение в число и вычитаем 1
+        try {
+            id_goods_basket_after_del_matchNr = id_goods_basket_after_del_matchNr != null ? Integer.parseInt(id_goods_basket_after_del_matchNr) - 1 : 0;
+        } catch (Exception e) {
+            log.error(&quot;An error occurred while trying to parse id_goods_basket_after_del_matchNr: &quot; + e);
+        }
+    } else {
+        log.error(&quot;id_goods_basket_after_del_matchNr is not a valid string&quot;);
+    }
+
+// JSR223 Sampler для проверки условия и обработки после удаления элемента
+// Проверяем условие, что значение переменной id_goods_basket_befo_del_matchNr больше 0
+if (Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;)) &gt; 0) {
+    // Получаем значение переменной id_goods_basket_after_del_matchNr из переменной id_goods_basket_befo_del_matchNr, если первая не существует
+    def id_goods_basket_after_del_matchNr = vars.get(&quot;id_goods_basket_after_del_matchNr&quot;) ?: vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;);
+    // Устанавливаем значение переменной id_goods_basket_after_del_matchNr
+    vars.put(&quot;id_goods_basket_after_del_matchNr&quot;, id_goods_basket_after_del_matchNr as String);
+
+    // Обновляем значение переменной id_goods_basket_after_del_matchNr в глобальном контексте JMeter
+    try {
+        vars.put(&quot;id_goods_basket_after_del_matchNr&quot;, id_goods_basket_after_del_matchNr.toString());
+    } catch (Exception e) {
+        log.error(&quot;An error occurred while trying to update id_goods_basket_after_del_matchNr: &quot; + e);
+    }
+}
+
+    // Получаем числовое значение из переменной id_goods_basket_after_del_matchNr и выводим в лог
+    def counter_after = Integer.parseInt(id_goods_basket_after_del_matchNr);
+    log.info(counter_after + &quot;-------------------------------------------------&quot;);</stringProp>
+              <stringProp name="TestPlan.comments">??? элементы синтаксиса кода Groovy на изучение ??? </stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_5.LogOut" enabled="false">
+        <stringProp name="TestPlan.comments">Выход из системы</stringProp>
+      </TestFragmentController>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_5.LogOut" enabled="true">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="5.Выход из системы" enabled="true">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">443</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/?go=basket</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="MyScriptManager" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">MyScriptManager</stringProp>
+                  <stringProp name="Argument.value">ctl15$MyLoginForm$upLoginForm|ctl15$MyLoginForm$btnLogOut</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTTARGET" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__EVENTTARGET</stringProp>
+                  <stringProp name="Argument.value">MyPageManager$MyMainPage$ctl02$btnRefresh</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTARGUMENT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__EVENTARGUMENT</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATE" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATE</stringProp>
+                  <stringProp name="Argument.value">/haCwGDFahbFxGkUbbriPEaCxVkzhrWN77Jt8aSNdJFaLq4I/GW7n5qFFrfWYirYNr635F8wDHAFZ72VcpgJVUjM1I+6X20WFpSHc3oYlJUOwHb1MMMjgwfCSqjq3wsyQnm34PTuWObKbB8qpPMXvdqumhttQrH4/wbS6Nrlr6F6IAzLONL8ufAn/4EQAmrmtzht25+75kW7w6Qkz/T+SQ==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATEGENERATOR" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATEGENERATOR</stringProp>
+                  <stringProp name="Argument.value">CA0B0334</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__ASYNCPOST" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__ASYNCPOST</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="ctl15$MyLoginForm$btnLogOut" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">ctl15$MyLoginForm$btnLogOut</stringProp>
+                  <stringProp name="Argument.value">Выход</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings"/>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
