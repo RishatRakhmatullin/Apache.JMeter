@@ -20,7 +20,7 @@
 </p>
 Как видно из Response Body 2-02.Main page. Каталог "Казы из конины" - "icon14", имеет "0" наименований.</p>
 Поэтому, при рандомном выборе "icon14", заменяем его на "icon5" - "Мясные деликатесы" у которого "35" наменований принудительно в "JSR223 PostProcessor. Выбор id_catalog".</p>
-Response Body 2-02.Main page: 
+Response Body 2-02.Main page: </p>
 class="cc_block" id="icon14" href="/catalog/kazy_iz_koniny/" > 		<span>&nbsp;</span><b>Казы из конины</b><font>0 наименований</font>
 </p>
 class="cc_block" id="icon5" href="/catalog/myasnye-delikatesy/" > 		<span>&nbsp;</span><b>Мясные деликатесы</b><font>35 наименований</font>
