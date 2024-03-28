@@ -10,10 +10,10 @@
 2. Выбор id подкаталога на главной странице рандомным способом
 3. Выбор id товара на странице подкаталога рандомным способом
 4. Добавление в корзину, выбранного id товара. 
-   Выбор товара M раз, где M - рандомное количество от 1 до M
+   Выбор товара M раз, где M - рандомное количество от 1 до 3
 5. Выбор id товара в корзине рандомным способом
 6. Удаление из корзины, выбранного id товара
-   Удаление товара N раз, где N - рандомное количество от 1 до N
+   Удаление товара N раз, где N - рандомное количество от 1 до 2
 7. Выход из системы
 
 <b>Примечание:</b>
@@ -33,11 +33,11 @@ id="icon5" href="/catalog/myasnye-delikatesy/" > 		<span>&nbsp;</span><b>Мяс�
 2. Randomly selecting a subcategory ID on the main page
 3. Randomly selecting a product ID on the subcategory page
 4. Adding the selected product to the shopping cart
-   Selecting the product M times, where M is a random number from 1 to M
+   Selecting the product M times, where M is a random number from 1 to 3
 5. Randomly selecting a product ID in the shopping cart
 5. Removing the selected product ID from the shopping cart
 6. Removing the selected product from the cart
-   Removing the product N times, where N is a random number from 1 to N
+   Removing the product N times, where N is a random number from 1 to 2
 6. Logging out of the system
 <p
 </p>
