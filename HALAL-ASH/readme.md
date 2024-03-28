@@ -32,7 +32,7 @@ id="icon5" href="/catalog/myasnye-delikatesy/" > 		<span>&nbsp;</span><b>Мяс�
 1. Authorization on the website
 2. Randomly selecting a subcategory ID on the main page
 3. Randomly selecting a product ID on the subcategory page
-4. Adding the selected product to the shopping cart
+4. Adding the selected product to the shopping cart.
    Adding the product M times, where M is a random number from 1 to 3
 5. Randomly selecting a product ID in the shopping cart
 5. Removing the selected product ID from the shopping cart
