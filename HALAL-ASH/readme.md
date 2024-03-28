@@ -18,10 +18,10 @@
 
 <b>Примечание:</b>
 </p>
-Как видно из Response Body 2-02.Main page. Каталог "Казы из конины" - "icon14", имеет "0" наименований.
+Как видно из <b>Response Body 2-02.Main page</b>, каталог "Казы из конины" - "icon14", имеет "0" наименований.
 </p>
 Поэтому, при рандомном выборе "icon14", заменяем его ( "2-00. JSR223 PostProcessor. Выбор id_catalog") на подобный каталог "icon5" - "Мясные деликатесы" у которого "35" наменований .</p>
-Response Body 2-02.Main page: </p>
+<b>Response Body 2-02.Main page</b>: </p>
 id="icon14" href="/catalog/kazy_iz_koniny/" > 		<span>&nbsp;</span><b>Казы из конины</b><font>0 наименований</font></p>
 id="icon5" href="/catalog/myasnye-delikatesy/" > 		<span>&nbsp;</span><b>Мясные деликатесы</b><font>35 наименований</font>
 
