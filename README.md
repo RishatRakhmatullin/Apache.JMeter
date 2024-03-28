@@ -1,1 +1,1 @@
-JMeter projects for exploration
+Apache.JMeter projects
