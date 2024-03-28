@@ -12,7 +12,7 @@
 4. Добавление в корзину, выбранного id товара. 
    Добавление товара M раз, где M - рандомное количество от 1 до 3
 5. Выбор id товара в корзине рандомным способом
-6. Удаление из корзины, выбранного id товара
+6. Удаление из корзины, выбранного id товара.
    Удаление товара N раз, где N - рандомное количество от 1 до 2
 7. Выход из системы
 
@@ -36,7 +36,7 @@ id="icon5" href="/catalog/myasnye-delikatesy/" > 		<span>&nbsp;</span><b>Мяс�
    Adding the product M times, where M is a random number from 1 to 3
 5. Randomly selecting a product ID in the shopping cart
 5. Removing the selected product ID from the shopping cart
-6. Removing the selected product from the cart
+6. Removing the selected product from the cart.
    Removing the product N times, where N is a random number from 1 to 2
 6. Logging out of the system
 <p
