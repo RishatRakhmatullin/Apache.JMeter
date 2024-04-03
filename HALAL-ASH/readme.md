@@ -51,6 +51,10 @@ Here we can see how many <b>transactions per second</b> are done in lapse of tim
 Here we can see <b>responses in lapse of time</b>
 ![Response times over time](Test_Results/3.response_times_over_time.png?raw=true "Title")
 
+</p>
+В HTTP Request (запрос) установлен параметр <b>Retrieve all embedded resources</b> для полноценной имитации браузера и получения всех ресурсов со страницы запроса.
+</p>
+
 Here we can see <b>active users (threads) in lapse of time</b>
 ![Active threads over time](Test_Results/4.active_threads_over_time.png?raw=true "Title")
 
