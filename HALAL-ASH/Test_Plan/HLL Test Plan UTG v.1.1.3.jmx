@@ -15,7 +15,7 @@
         <boolProp name="randomOrder">false</boolProp>
         <boolProp name="ignoreFirstLine">true</boolProp>
         <boolProp name="rewindOnTheEndOfList">true</boolProp>
-        <boolProp name="independentListPerThread">false</boolProp>
+        <boolProp name="independentListPerThread">true</boolProp>
       </com.blazemeter.jmeter.RandomCSVDataSetConfig>
       <hashTree/>
       <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="false">
@@ -140,6 +140,8 @@
             <stringProp name="Argument.desc">Счетчик итераций по удалению id товара из корзины</stringProp>
           </elementProp>
         </collectionProp>
+        <stringProp name="TestPlan.comments">M=${__Random(1,3)}
+N=${__Random(1,2)}</stringProp>
       </Arguments>
       <hashTree/>
       <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
@@ -178,162 +180,6 @@
         </objProp>
         <stringProp name="filename">~/../Test_Results/AgrRep.csv</stringProp>
       </ResultCollector>
-      <hashTree/>
-      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="SDW_All_requests">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>true</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <url>true</url>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
-          </value>
-        </objProp>
-        <stringProp name="filename">~/../Test_Results/SDW_All_requests.xml</stringProp>
-      </ResultCollector>
-      <hashTree/>
-      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="SDW_Errors">
-        <boolProp name="ResultCollector.error_logging">true</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>true</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <url>true</url>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
-          </value>
-        </objProp>
-        <stringProp name="filename">~/../Test_Results/SDW_Errors.xml</stringProp>
-      </ResultCollector>
-      <hashTree/>
-      <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>true</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <url>true</url>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
-          </value>
-        </objProp>
-        <stringProp name="filename">~/../Test_Results/AsertRes.csv</stringProp>
-      </ResultCollector>
-      <hashTree/>
-      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time">
-        <boolProp name="ResultCollector.error_logging">false</boolProp>
-        <objProp>
-          <name>saveConfig</name>
-          <value class="SampleSaveConfiguration">
-            <time>true</time>
-            <latency>true</latency>
-            <timestamp>true</timestamp>
-            <success>true</success>
-            <label>true</label>
-            <code>true</code>
-            <message>true</message>
-            <threadName>true</threadName>
-            <dataType>true</dataType>
-            <encoding>false</encoding>
-            <assertions>true</assertions>
-            <subresults>true</subresults>
-            <responseData>false</responseData>
-            <samplerData>false</samplerData>
-            <xml>false</xml>
-            <fieldNames>true</fieldNames>
-            <responseHeaders>false</responseHeaders>
-            <requestHeaders>false</requestHeaders>
-            <responseDataOnError>false</responseDataOnError>
-            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-            <assertionsResultsToSave>0</assertionsResultsToSave>
-            <bytes>true</bytes>
-            <sentBytes>true</sentBytes>
-            <url>true</url>
-            <threadCounts>true</threadCounts>
-            <idleTime>true</idleTime>
-            <connectTime>true</connectTime>
-          </value>
-        </objProp>
-        <stringProp name="filename">~/../Test_Results/log1.active_threads.csv</stringProp>
-        <longProp name="interval_grouping">500</longProp>
-        <boolProp name="graph_aggregated">false</boolProp>
-        <stringProp name="include_sample_labels"></stringProp>
-        <stringProp name="exclude_sample_labels"></stringProp>
-        <stringProp name="start_offset"></stringProp>
-        <stringProp name="end_offset"></stringProp>
-        <boolProp name="include_checkbox_state">false</boolProp>
-        <boolProp name="exclude_checkbox_state">false</boolProp>
-      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
       <hashTree/>
       <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
@@ -424,6 +270,162 @@
         <boolProp name="include_checkbox_state">false</boolProp>
         <boolProp name="exclude_checkbox_state">false</boolProp>
       </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ThreadsStateOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Active Threads Over Time">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/log1.active_threads.csv</stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="AssertionVisualizer" testclass="ResultCollector" testname="Assertion Results">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/AsertRes.csv</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="SDW_All_requests">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/SDW_All_requests.xml</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="SDW_Errors">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename">~/../Test_Results/SDW_Errors.xml</stringProp>
+      </ResultCollector>
       <hashTree/>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
@@ -666,7 +668,6 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
       </ThreadGroup>
       <hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_dbg_UC02" enabled="true">
-          <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
@@ -678,7 +679,7 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-01. Main page, извлечение id_catalog" enabled="true">
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-00. Main page, извлечение id_catalog" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
               <stringProp name="764597751">Test Plan</stringProp>
@@ -686,7 +687,7 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; M" enabled="true">
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, Пока счетчик итераций &lt; M" enabled="true">
             <stringProp name="WhileController.condition">${__groovy((vars.get(&quot;selectedItemsCounter&quot;) as int) &lt; (vars.get(&quot;Random_goods_M&quot;) as int))}</stringProp>
             <stringProp name="TestPlan.comments">Выполняется пока счетчик &lt; Random_goods_M</stringProp>
           </WhileController>
@@ -696,15 +697,11 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script">//log.info(&quot;Значение selectedItemsCounter_0: &quot; + vars.get(&quot;selectedItemsCounter&quot;));
-def selectedItemsCounter = (vars.get(&quot;selectedItemsCounter&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;)) + 1;
-//selectedItemsCounter - Счетчик итераций по дабавлению id товара в корзину
+              <stringProp name="script">//selectedItemsCounter - Счетчик итераций M по дабавлению id товара в корзину
 
-//log.info(&quot;Значение selectedItemsCounter_1: &quot; + selectedItemsCounter);
+def selectedItemsCounter = (vars.get(&quot;selectedItemsCounter&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;)) + 1;
 
 vars.put(&quot;selectedItemsCounter&quot;, selectedItemsCounter as String);
-
-//log.info(&quot;Значение selectedItemsCounter_0: &quot; + vars.get(&quot;selectedItemsCounter&quot;));
 
 def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;));
 log.info(counter + &quot;-я итерация по дабавлению id товара в корзину ---&quot;)</stringProp>
@@ -718,10 +715,10 @@ log.info(counter + &quot;-я итерация по дабавлению id то�
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="script">def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;));
 
-log.info(counter + &quot;-------- Значение selectedItemsCounter --------&quot; + counter)
+//log.info(counter + &quot;-------- Значение selectedItemsCounter --------&quot; + counter)
 // Получаем значение переменной id_goods_buy_matchNr из переменных (vars)
 def matchNr = vars.get(&quot;id_goods_buy_matchNr&quot;)
-log.info(&quot;| Значение переменной id_goods_buy_matchNr=&quot; + matchNr)
+//log.info(&quot;| Значение переменной id_goods_buy_matchNr=&quot; + matchNr)
 
 // Генерируем случайное число в диапазоне от 1 до значения переменной id_goods_buy_matchNr
 def minRandomValue = 1
@@ -729,7 +726,7 @@ def maxRandomValue = Integer.parseInt(matchNr)
 //def random = new Random()
 //def randomValue = minRandomValue + random.nextInt(maxRandomValue)
 def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
-log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+//log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
 
 // Получаем значение переменной id_goods_buy_mp_N, где N - сгенерированное случайное число
 def id_goods = vars.get(&quot;id_goods_buy_&quot; + String.valueOf(randomValue))
@@ -750,6 +747,36 @@ vars.put(&quot;counter&quot;, counter as String);</stringProp>
             </ModuleController>
             <hashTree/>
           </hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 S. Обнуление счетчика M" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">// Проверяем существование переменной selectedItemsCounter
+if (vars.get(&quot;selectedItemsCounter&quot;) == null) {
+    log.error(&quot;Переменная selectedItemsCounter не инициализирована&quot;)
+} else {
+    //selectedItemsCounter - Счетчик итераций до M по добавлению id товара в корзину
+
+    // Проверяем условие: если значение selectedItemsCounter больше или равно значению переменной Random_goods_M
+    if (vars.get(&quot;selectedItemsCounter&quot;) as int == vars.get(&quot;Random_goods_M&quot;) as int) {
+        // Если условие истинно, то присваиваем значение 0 переменной selectedItemsCounter
+        vars.put(&quot;selectedItemsCounter&quot;, &quot;0&quot;)
+        this.vars.put(&quot;selectedItemsCounter&quot;, &quot;0&quot;) // обновление значения в объекте vars
+    }
+
+    // Преобразуем значение selectedItemsCounter в целое число для удобства работы с ним
+    def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;))
+    log.info(counter + &quot;-я итерация. Сброс счетчика M по добавлению id товара в корзину&quot;)
+
+    // Обновляем значения переменных в объекте vars.
+    vars.put(&quot;selectedItemsCounter&quot;, counter.toString())
+    vars.put(&quot;counter&quot;, counter.toString())
+}
+</stringProp>
+            <stringProp name="TestPlan.comments">Сброс счетчика M до 0</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
           <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_3-01.Перейти в корзину" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
@@ -757,6 +784,66 @@ vars.put(&quot;counter&quot;, counter as String);</stringProp>
               <stringProp name="104885329">TF_3.Перейти в корзину</stringProp>
             </collectionProp>
           </ModuleController>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 S. Обнуление счетчика N" enabled="false">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">def selectedItemsCounter_del = vars.get(&quot;selectedItemsCounter_del&quot;)
+def Random_del_goods_N = vars.get(&quot;Random_del_goods_N&quot;)
+
+if (selectedItemsCounter_del == null) {
+    selectedItemsCounter_del = 0
+}
+
+if (Random_del_goods_N == null) {
+    Random_del_goods_N = 0
+}
+
+if (selectedItemsCounter_del == randomGoods_M) {
+    log.info(&quot;Обнуляем счетчик M, так как он равен Random_goods_M&quot;)
+    selectedItemsCounterM = 0
+}
+
+log.info(&quot;${selectedItemsCounterM}-я итерация. Сброс счетчика M по добавлению id товара в корзину&quot;)
+
+vars.put(&quot;selectedItemsCounter_M&quot;, selectedItemsCounterM)
+vars.put(&quot;counter_M&quot;, selectedItemsCounterM as String)
+
+</stringProp>
+            <stringProp name="TestPlan.comments">Сброс счетчика N до 0</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 S. Обнуление счетчика N" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">// Проверяем существование переменной selectedItemsCounter_del
+if (vars.get(&quot;selectedItemsCounter_del&quot;) == null) {
+    log.error(&quot;Переменная selectedItemsCounter_del не инициализирована&quot;)
+} else {
+    //selectedItemsCounter_del - Счетчик итераций до N по удалению id товара из корзины
+
+    // Проверяем условие: если значение selectedItemsCounter_del больше или равно значению переменной Random_del_goods_N
+    if (vars.get(&quot;selectedItemsCounter_del&quot;) as int == vars.get(&quot;Random_del_goods_N&quot;) as int) {
+        // Если условие истинно, то присваиваем значение 0 переменной selectedItemsCounter_del
+        vars.put(&quot;selectedItemsCounter_del&quot;, &quot;0&quot;)
+        this.vars.put(&quot;selectedItemsCounter_del&quot;, &quot;0&quot;) // обновление значения в объекте vars
+    }
+
+    // Преобразуем значение selectedItemsCounter_del в целое число для удобства работы с ним
+    def counter_del = vars.get(&quot;selectedItemsCounter_del&quot;) as int
+    log.info(counter_del + &quot;-я итерация Сброс счетчика N по удалению id товара из корзины&quot;)
+
+    // Обновляем значения переменных в объекте vars
+    vars.put(&quot;selectedItemsCounter_del&quot;, counter_del.toString())
+    vars.put(&quot;counter_del&quot;, counter_del.toString())
+}
+</stringProp>
+            <stringProp name="TestPlan.comments">Сброс счетчика N до 0</stringProp>
+          </JSR223Sampler>
           <hashTree/>
           <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; N" enabled="true">
             <stringProp name="WhileController.condition">${__groovy((vars.get(&quot;selectedItemsCounter_del&quot;) as int) &lt; (vars.get(&quot;Random_del_goods_N&quot;) as int))}</stringProp>
@@ -768,28 +855,16 @@ vars.put(&quot;counter&quot;, counter as String);</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script">//log.info(&quot;Значение selectedItemsCounter_del_0: &quot; + vars.get(&quot;selectedItemsCounter_del&quot;));
-def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
-//selectedItemsCounter_del - Счётчик итераций по удалению id товара из корзины
+              <stringProp name="script">//selectedItemsCounter_del - Счётчик итераций N по удалению id товара из корзины
 
-//log.info(&quot;Значение selectedItemsCounter_del_1: &quot; + selectedItemsCounter_del);
+def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
 
 vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);
-
-//log.info(&quot;Значение selectedItemsCounter_del_0: &quot; + vars.get(&quot;selectedItemsCounter_del&quot;));
-
-//int counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
-//log.info(&quot;Значение selectedItemsCounter_del: &quot; + counter_del);
 
 def counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
 log.info(counter_del + &quot;-я итерация по удалению id товара из корзины ---&quot;)
 
-//def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 0 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
-//vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);
-
-
-//def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
-//log.info(counter + &quot;-------------------------------------------------&quot;)</stringProp>
+//vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);</stringProp>
               <stringProp name="TestPlan.comments">Счётчик итераций по удалению id товара из корзины</stringProp>
             </JSR223Sampler>
             <hashTree/>
@@ -798,7 +873,7 @@ log.info(counter_del + &quot;-я итерация по удалению id то�
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script">// Первый блок кода (JSR223 Sampler) - объявление значения переменной &quot;id_goods_basket_befo_del_matchNr&quot;
+              <stringProp name="script">// Первый блок кода (JSR223_4-03-1_ counter_befo_del) - объявление значения переменной &quot;id_goods_basket_befo_del_matchNr&quot;
 def id_goods_basket_befo_del_matchNr = 
 (vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) == null) ? 
     vars.get(&quot;del_basket_id_matchNr&quot;) : 
@@ -812,47 +887,6 @@ def counter_befo = Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matc
 log.info(counter_befo + &quot; ----------------------------------------------&quot;)
 </stringProp>
               <stringProp name="TestPlan.comments">Счётчик остатка товара в корзине перед итерацией удаления id товара из корзины</stringProp>
-            </JSR223Sampler>
-            <hashTree/>
-            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_ counter_befo" enabled="false">
-              <stringProp name="scriptLanguage">groovy</stringProp>
-              <stringProp name="parameters"></stringProp>
-              <stringProp name="filename"></stringProp>
-              <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script">// Объявляем переменные
-def id_goods_basket_befo_del_matchNr;
-//def del_basket_id_matchNr;
-
-// Пытаемся получить значения переменных из глобального контекста JMeter
-try {
-    id_goods_basket_befo_del_matchNr = vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;);
-    del_basket_id_matchNr = vars.get(&quot;del_basket_id_matchNr&quot;);
-    id_goods_basket_after_del_matchNr = vars.get(&quot;id_goods_basket_after_del_matchNr&quot;);
-} catch (Exception e) {
-    log.error(&quot;An error occurred while trying to get variable values: &quot; + e);
-}
-
-// Проверяем тип переменной id_goods_basket_befo_del_matchNr
-if (id_goods_basket_befo_del_matchNr instanceof String) {
-    // Если переменная существует и имеет тип String, преобразуем ее значение в число
-    id_goods_basket_befo_del_matchNr = id_goods_basket_befo_del_matchNr != null ? Integer.parseInt(id_goods_basket_befo_del_matchNr) : 0;
-} else {
-    log.error(&quot;id_goods_basket_befo_del_matchNr is not a valid string&quot;);
-}
-
-// JSR223 Sampler для удаления элемента из корзины
-// Получаем значение переменной id_goods_basket_befo_del_matchNr из переменной del_basket_id_matchNr, если первая не существует
-def id_goods_basket_befo_del_matchNr = vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) ?: vars.get(&quot;del_basket_id_matchNr&quot;);
-// Проверяем наличие переменной del_basket_id_matchNr перед использованием
-if (vars.get(&quot;del_basket_id_matchNr&quot;) != null) {
-    // Если переменная del_basket_id_matchNr существует, устанавливаем значение переменной id_goods_basket_befo_del_matchNr
-    vars.put(&quot;id_goods_basket_befo_del_matchNr&quot;, id_goods_basket_befo_del_matchNr as String);
-
-    // Получаем числовое значение из переменной id_goods_basket_befo_del_matchNr и выводим в лог
-    def counter_befo = Integer.parseInt(id_goods_basket_befo_del_matchNr);
-    log.info(counter_befo + &quot;-------------------------------------------------&quot;);
-</stringProp>
-              <stringProp name="TestPlan.comments">??? элементы синтаксиса кода Groovy на изучение ??? </stringProp>
             </JSR223Sampler>
             <hashTree/>
             <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03_Выбор del_basket_id" enabled="true">
@@ -877,12 +911,12 @@ def maxRandomValue = Integer.parseInt(matchNr)
 //def random = new Random()
 //def randomValue = minRandomValue + random.nextInt(maxRandomValue)
 def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
-log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+//log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
 
 // Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число
 def del_basket_id = vars.get(&quot;del_basket_id_&quot; + String.valueOf(randomValue))
 log.info(&quot;| Значение переменной del_basket_id_&quot; + randomValue + &quot;: &quot; + del_basket_id)
-log.info(counter_del + &quot;------ Значение selectedItemsCounter_del ------&quot; + counter_del)
+//log.info(counter_del + &quot;------ Значение selectedItemsCounter_del ------&quot; + counter_del)
 
 vars.put(&quot;del_basket_id&quot;, del_basket_id as String);
 vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
@@ -905,12 +939,6 @@ vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
               <stringProp name="931020944">TF_5.LogOut</stringProp>
             </collectionProp>
           </ModuleController>
-          <hashTree/>
-          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
-            <boolProp name="displayJMeterProperties">false</boolProp>
-            <boolProp name="displayJMeterVariables">true</boolProp>
-            <boolProp name="displaySystemProperties">false</boolProp>
-          </DebugSampler>
           <hashTree/>
         </hashTree>
       </hashTree>
@@ -1051,7 +1079,7 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="UTG_Test_2">
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="UTG_Test_2" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-1008013735">
             <stringProp name="49">1</stringProp>
@@ -1089,20 +1117,20 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
         </TestAction>
         <hashTree>
           <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer">
-            <intProp name="calcMode">0</intProp>
+            <intProp name="calcMode">1</intProp>
             <doubleProp>
               <name>throughput</name>
-              <value>10.0</value>
+              <value>4.0</value>
               <savedValue>0.0</savedValue>
             </doubleProp>
           </ConstantThroughputTimer>
           <hashTree/>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_dbg_UC02">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="TC_dbg_UC02" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_1.LogOn">
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_1.LogOn" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
               <stringProp name="764597751">Test Plan</stringProp>
@@ -1110,7 +1138,7 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-01. Main page, извлечение id_catalog">
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-00. Main page, извлечение id_catalog" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
               <stringProp name="764597751">Test Plan</stringProp>
@@ -1118,7 +1146,7 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; M">
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, Пока счетчик итераций &lt; M" enabled="true">
             <stringProp name="WhileController.condition">${__groovy((vars.get(&quot;selectedItemsCounter&quot;) as int) &lt; (vars.get(&quot;Random_goods_M&quot;) as int))}</stringProp>
             <stringProp name="TestPlan.comments">Выполняется пока счетчик &lt; Random_goods_M</stringProp>
           </WhileController>
@@ -1128,15 +1156,11 @@ vars.put(&quot;id_goods&quot;, id_goods as String);</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script">//log.info(&quot;Значение selectedItemsCounter_0: &quot; + vars.get(&quot;selectedItemsCounter&quot;));
-def selectedItemsCounter = (vars.get(&quot;selectedItemsCounter&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;)) + 1;
-//selectedItemsCounter - Счетчик итераций по дабавлению id товара в корзину
+              <stringProp name="script">//selectedItemsCounter - Счетчик итераций M по дабавлению id товара в корзину
 
-//log.info(&quot;Значение selectedItemsCounter_1: &quot; + selectedItemsCounter);
+def selectedItemsCounter = (vars.get(&quot;selectedItemsCounter&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;)) + 1;
 
 vars.put(&quot;selectedItemsCounter&quot;, selectedItemsCounter as String);
-
-//log.info(&quot;Значение selectedItemsCounter_0: &quot; + vars.get(&quot;selectedItemsCounter&quot;));
 
 def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;));
 log.info(counter + &quot;-я итерация по дабавлению id товара в корзину ---&quot;)</stringProp>
@@ -1153,7 +1177,7 @@ log.info(counter + &quot;-я итерация по дабавлению id то�
 log.info(counter + &quot;-------- Значение selectedItemsCounter --------&quot; + counter)
 // Получаем значение переменной id_goods_buy_matchNr из переменных (vars)
 def matchNr = vars.get(&quot;id_goods_buy_matchNr&quot;)
-log.info(&quot;| Значение переменной id_goods_buy_matchNr=&quot; + matchNr)
+//log.info(&quot;| Значение переменной id_goods_buy_matchNr=&quot; + matchNr)
 
 // Генерируем случайное число в диапазоне от 1 до значения переменной id_goods_buy_matchNr
 def minRandomValue = 1
@@ -1161,7 +1185,7 @@ def maxRandomValue = Integer.parseInt(matchNr)
 //def random = new Random()
 //def randomValue = minRandomValue + random.nextInt(maxRandomValue)
 def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
-log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+//log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
 
 // Получаем значение переменной id_goods_buy_mp_N, где N - сгенерированное случайное число
 def id_goods = vars.get(&quot;id_goods_buy_&quot; + String.valueOf(randomValue))
@@ -1173,7 +1197,7 @@ vars.put(&quot;counter&quot;, counter as String);</stringProp>
               <stringProp name="TestPlan.comments">метод org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)</stringProp>
             </JSR223Sampler>
             <hashTree/>
-            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-03.Кнопка Купить, добавить M id в корзину">
+            <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_2-03.Кнопка Купить, добавить M id в корзину" enabled="true">
               <collectionProp name="ModuleController.node_path">
                 <stringProp name="764597751">Test Plan</stringProp>
                 <stringProp name="764597751">Test Plan</stringProp>
@@ -1182,7 +1206,37 @@ vars.put(&quot;counter&quot;, counter as String);</stringProp>
             </ModuleController>
             <hashTree/>
           </hashTree>
-          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_3-01.Перейти в корзину">
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 S. Обнуление счетчика M" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">//selectedItemsCounter - Счетчик итераций до M по добавлению id товара в корзину
+// Проверяем существование переменной selectedItemsCounter
+if (vars.get(&quot;selectedItemsCounter&quot;) == null) {
+    log.error(&quot;Переменная selectedItemsCounter не инициализирована&quot;)
+} else {
+
+    // Проверяем условие: если значение selectedItemsCounter равно значению переменной Random_goods_M
+    if (vars.get(&quot;selectedItemsCounter&quot;) as int == vars.get(&quot;Random_goods_M&quot;) as int) {
+        // Если условие истинно, то присваиваем значение 0 переменной selectedItemsCounter
+        vars.put(&quot;selectedItemsCounter&quot;, &quot;0&quot;)
+        this.vars.put(&quot;selectedItemsCounter&quot;, &quot;0&quot;) // обновление значения в объекте vars
+    }
+
+    // Преобразуем значение selectedItemsCounter в целое число для удобства работы с ним
+    def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter&quot;))
+    log.info(counter + &quot;-я итерация. Сброс счетчика M по добавлению id товара в корзину&quot;)
+
+    // Обновляем значения переменных в объекте vars.
+    vars.put(&quot;selectedItemsCounter&quot;, counter.toString())
+    vars.put(&quot;counter&quot;, counter.toString())
+}
+</stringProp>
+            <stringProp name="TestPlan.comments">Сброс счетчика M до 0 для следующего User</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_3-01.Перейти в корзину" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
               <stringProp name="764597751">Test Plan</stringProp>
@@ -1190,7 +1244,124 @@ vars.put(&quot;counter&quot;, counter as String);</stringProp>
             </collectionProp>
           </ModuleController>
           <hashTree/>
-          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; N">
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 S. Обнуление счетчика N" enabled="false">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">def selectedItemsCounter_del = vars.get(&quot;selectedItemsCounter_del&quot;)
+def Random_del_goods_N = vars.get(&quot;Random_del_goods_N&quot;)
+
+if (selectedItemsCounter_del == null) {
+    selectedItemsCounter_del = 0
+}
+
+if (Random_del_goods_N == null) {
+    Random_del_goods_N = 0
+}
+
+if (selectedItemsCounter_del == randomGoods_M) {
+    log.info(&quot;Обнуляем счетчик M, так как он равен Random_goods_M&quot;)
+    selectedItemsCounterM = 0
+}
+
+log.info(&quot;${selectedItemsCounterM}-я итерация. Сброс счетчика M по добавлению id товара в корзину&quot;)
+
+vars.put(&quot;selectedItemsCounter_M&quot;, selectedItemsCounterM)
+vars.put(&quot;counter_M&quot;, selectedItemsCounterM as String)
+
+</stringProp>
+            <stringProp name="TestPlan.comments">Сброс счетчика N до 0</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 S. Обнуление счетчика N" enabled="false">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">//selectedItemsCounter_del - Счетчик итераций до N по удалению id товара из корзины
+
+// Проверяем существование переменной selectedItemsCounter_del
+def selectedItemsCounter_del = vars.get(&quot;selectedItemsCounter_del&quot;)
+if (selectedItemsCounter_del == null) {
+    log.info(&quot;Переменная selectedItemsCounter_del не инициализирована, инициализируем и устанавливаем значение 0&quot;)
+    selectedItemsCounter_del = 0
+}
+
+// Проверяем и преобразуем значение переменной Random_del_goods_N в Integer
+def Random_del_goods_N = vars.get(&quot;Random_del_goods_N&quot;)
+if (Random_del_goods_N == null) {
+    log.error(&quot;Переменная Random_del_goods_N не определена&quot;)
+} else {
+    Random_del_goods_N = Random_del_goods_N.toInteger()
+}
+
+// Проверяем условие: если значение selectedItemsCounter_del равно значению переменной Random_del_goods_N
+def Random_del_goods_N = vars.get(&quot;Random_del_goods_N&quot;) as java.lang.Integer
+if (selectedItemsCounter_del == Random_del_goods_N) {
+    // Если условие истинно, то сбрасываем счетчик установкой его в 0
+    vars.put(&quot;selectedItemsCounter_del&quot;, &quot;0&quot;)
+    this.vars.put(&quot;selectedItemsCounter_del&quot;, &quot;0&quot;) // обновление значения в объекте vars
+}
+
+// Преобразуем значение selectedItemsCounter_del в целое число для удобства работы с ним
+def counter_del = selectedItemsCounter_del
+log.info(counter_del + &quot;-я итерация Сброс счетчика N по удалению id товара из корзины&quot;)
+
+// Обновляем значения переменных в объекте vars
+vars.put(&quot;selectedItemsCounter_del&quot;, counter_del.toString())
+vars.put(&quot;counter_del&quot;, counter_del.toString())
+</stringProp>
+            <stringProp name="TestPlan.comments">Сброс счетчика N до 0</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 S. Обнуление счетчика N">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">//selectedItemsCounter_del - Счетчик итераций до N по удалению id товара из корзины
+
+// Проверяем и преобразуем значение переменной Random_del_goods_N в Integer
+def Random_del_goods_N = vars.get(&quot;Random_del_goods_N&quot;)
+if (Random_del_goods_N == null) {
+    log.error(&quot;Переменная Random_del_goods_N не определена&quot;)
+} else {
+    Random_del_goods_N = Random_del_goods_N.toInteger()
+}
+
+log.info(&quot;До выполнения условия: ${Random_del_goods_N}&quot;)
+
+// Проверяем существование переменной selectedItemsCounter_del
+def selectedItemsCounter_del = vars.get(&quot;selectedItemsCounter_del&quot;)
+//  if (selectedItemsCounter_del == null) {
+    log.info(&quot;Переменная selectedItemsCounter_del не инициализирована, инициализируем и устанавливаем значение 0&quot;)
+    selectedItemsCounter_del = 0
+//}
+
+log.info(&quot;selectedItemsCounter_del = ${selectedItemsCounter_del}&quot;)
+
+// Проверяем условие: если значение selectedItemsCounter_del равно значению переменной Random_del_goods_N
+if (selectedItemsCounter_del == Random_del_goods_N) {
+    // Если условие истинно, то сбрасываем счетчик установкой его в 0
+//    vars.put(&quot;selectedItemsCounter_del&quot;, &quot;0&quot;)
+//    this.vars.put(&quot;selectedItemsCounter_del&quot;, &quot;0&quot;) // обновление значения в объекте vars
+    selectedItemsCounter_del = 0
+}
+
+// Преобразуем значение selectedItemsCounter_del в целое число для удобства работы с ним
+def counter_del = selectedItemsCounter_del
+log.info(counter_del + &quot;-я итерация Сброс счетчика N по удалению id товара из корзины&quot;)
+
+// Обновляем значения переменных в объекте vars
+vars.put(&quot;selectedItemsCounter_del&quot;, counter_del.toString())
+vars.put(&quot;counter_del&quot;, counter_del.toString())
+
+log.info(&quot;После выполнения условия: ${selectedItemsCounter_del}&quot;)</stringProp>
+            <stringProp name="TestPlan.comments">Сброс счетчика N до 0</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While Controller, пока счетчик итераций &lt; N" enabled="true">
             <stringProp name="WhileController.condition">${__groovy((vars.get(&quot;selectedItemsCounter_del&quot;) as int) &lt; (vars.get(&quot;Random_del_goods_N&quot;) as int))}</stringProp>
             <stringProp name="TestPlan.comments">Выполняется пока счетчик &lt; Random_del_goods_N</stringProp>
           </WhileController>
@@ -1200,37 +1371,94 @@ vars.put(&quot;counter&quot;, counter as String);</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script">//log.info(&quot;Значение selectedItemsCounter_del_0: &quot; + vars.get(&quot;selectedItemsCounter_del&quot;));
-def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
-//selectedItemsCounter_del - Счётчик итераций по удалению id товара из корзины
+              <stringProp name="script">//selectedItemsCounter_del - Счётчик итераций N по удалению id товара из корзины
 
-//log.info(&quot;Значение selectedItemsCounter_del_1: &quot; + selectedItemsCounter_del);
+def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 1 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
 
 vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);
-
-//log.info(&quot;Значение selectedItemsCounter_del_0: &quot; + vars.get(&quot;selectedItemsCounter_del&quot;));
-
-//int counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
-//log.info(&quot;Значение selectedItemsCounter_del: &quot; + counter_del);
 
 def counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
 log.info(counter_del + &quot;-я итерация по удалению id товара из корзины ---&quot;)
 
-//def selectedItemsCounter_del = (vars.get(&quot;selectedItemsCounter_del&quot;) == null) ? 0 : Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;)) + 1;
-//vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);
-
-
-//def counter = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;));
-//log.info(counter + &quot;-------------------------------------------------&quot;)</stringProp>
+//vars.put(&quot;selectedItemsCounter_del&quot;, selectedItemsCounter_del as String);</stringProp>
               <stringProp name="TestPlan.comments">Счётчик итераций по удалению id товара из корзины</stringProp>
             </JSR223Sampler>
             <hashTree/>
-            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03-1_ counter_befo_del" enabled="true">
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03-1_ counter_befo_del_3" enabled="true">
               <stringProp name="scriptLanguage">groovy</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script">// Первый блок кода (JSR223 Sampler) - объявление значения переменной &quot;id_goods_basket_befo_del_matchNr&quot;
+              <stringProp name="script">def id_goods_basket_befo_del_matchNr = (vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) == null) ? vars.get(&quot;del_basket_id_matchNr&quot;) : vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;);
+def id_goods_basket_befo_del_matchNrInt = Integer.parseInt(id_goods_basket_befo_del_matchNr);
+
+if (id_goods_basket_befo_del_matchNrInt &gt; 0) {
+    id_goods_basket_befo_del_matchNrInt--;
+
+// JSR223_4-03_Выбор del_basket_id_2_начало
+
+// Получаем значение переменной selectedItemsCounter_del из переменных (vars) и преобразуем его в целое число
+def counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;))
+
+// Получаем значение переменной del_basket_id_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;del_basket_id_matchNr&quot;)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной del_basket_id_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
+
+// Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число
+def del_basket_id = vars.get(&quot;del_basket_id_&quot; + randomValue)
+
+// Сохраняем значения переменных del_basket_id и counter_del в формате строк в объект vars
+vars.put(&quot;del_basket_id&quot;, del_basket_id.toString())
+vars.put(&quot;counter_del&quot;, counter_del.toString())
+
+// JSR223_4-03_Выбор del_basket_id_2_конец
+    
+} else {
+    log.info(&quot;id_goods_basket_befo_del_matchNr уже равен 0, нельзя уменьшить его&quot;);
+}
+
+vars.put(&quot;id_goods_basket_befo_del_matchNr&quot;, id_goods_basket_befo_del_matchNrInt.toString());
+
+def counter_befo = Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;));
+log.info(counter_befo + &quot; -------- в цикле While, пока счетчик &lt; N --------&quot;);</stringProp>
+              <stringProp name="TestPlan.comments">Счётчик остатка товара в корзине перед итерацией удаления id товара из корзины</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03-1_ counter_befo_del" enabled="false">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">def id_goods_basket_befo_del_matchNr = 
+(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) == null) ? 
+    vars.get(&quot;del_basket_id_matchNr&quot;) : 
+    Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;));
+
+def id_goods_basket_befo_del_matchNrInt = Integer.parseInt(id_goods_basket_befo_del_matchNr);
+
+if (id_goods_basket_befo_del_matchNrInt &gt; 0) {
+    id_goods_basket_befo_del_matchNrInt--
+} else {
+    log.info(&quot;id_goods_basket_befo_del_matchNr уже равен 0, нельзя уменьшить его&quot;)
+}
+
+vars.put(&quot;id_goods_basket_befo_del_matchNr&quot;, id_goods_basket_befo_del_matchNrInt.toString());
+
+def counter_befo = Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;));
+log.info(counter_befo + &quot; ----------------------------------------------&quot;);</stringProp>
+              <stringProp name="TestPlan.comments">Счётчик остатка товара в корзине перед итерацией удаления id товара из корзины</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03-1_ counter_befo_del" enabled="false">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// Первый блок кода (JSR223_4-03-1_ counter_befo_del) - объявление значения переменной &quot;id_goods_basket_befo_del_matchNr&quot;
 def id_goods_basket_befo_del_matchNr = 
 (vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;) == null) ? 
     vars.get(&quot;del_basket_id_matchNr&quot;) : 
@@ -1246,7 +1474,35 @@ log.info(counter_befo + &quot; ----------------------------------------------&qu
               <stringProp name="TestPlan.comments">Счётчик остатка товара в корзине перед итерацией удаления id товара из корзины</stringProp>
             </JSR223Sampler>
             <hashTree/>
-            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03_Выбор del_basket_id" enabled="true">
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03_Выбор del_basket_id_2" enabled="false">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">//def counter_del = vars.get(&quot;selectedItemsCounter_del&quot;)
+
+// Получаем значение переменной selectedItemsCounter_del из переменных (vars) и преобразуем его в целое число
+def counter_del = Integer.parseInt(vars.get(&quot;selectedItemsCounter_del&quot;))
+
+// Получаем значение переменной del_basket_id_matchNr из переменных (vars)
+def matchNr = vars.get(&quot;del_basket_id_matchNr&quot;)
+
+// Генерируем случайное число в диапазоне от 1 до значения переменной del_basket_id_matchNr
+def minRandomValue = 1
+def maxRandomValue = Integer.parseInt(matchNr)
+def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
+
+// Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число
+def del_basket_id = vars.get(&quot;del_basket_id_&quot; + randomValue)
+
+// Сохраняем значения переменных del_basket_id и counter_del в формате строк в объект vars
+vars.put(&quot;del_basket_id&quot;, del_basket_id.toString())
+vars.put(&quot;counter_del&quot;, counter_del.toString())
+</stringProp>
+              <stringProp name="TestPlan.comments">Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223_4-03_Выбор del_basket_id_1" enabled="false">
               <stringProp name="scriptLanguage">groovy</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
@@ -1268,12 +1524,12 @@ def maxRandomValue = Integer.parseInt(matchNr)
 //def random = new Random()
 //def randomValue = minRandomValue + random.nextInt(maxRandomValue)
 def randomValue = org.apache.commons.lang3.RandomUtils.nextInt(minRandomValue, maxRandomValue)
-log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+//log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
 
 // Получаем значение переменной del_basket_id_N, где N - сгенерированное случайное число
 def del_basket_id = vars.get(&quot;del_basket_id_&quot; + String.valueOf(randomValue))
 log.info(&quot;| Значение переменной del_basket_id_&quot; + randomValue + &quot;: &quot; + del_basket_id)
-log.info(counter_del + &quot;------ Значение selectedItemsCounter_del ------&quot; + counter_del)
+//log.info(counter_del + &quot;------ Значение selectedItemsCounter_del ------&quot; + counter_del)
 
 vars.put(&quot;del_basket_id&quot;, del_basket_id as String);
 vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
@@ -1289,7 +1545,7 @@ vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
             </ModuleController>
             <hashTree/>
           </hashTree>
-          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_5.LogOut">
+          <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="MC_5.LogOut" enabled="true">
             <collectionProp name="ModuleController.node_path">
               <stringProp name="764597751">Test Plan</stringProp>
               <stringProp name="764597751">Test Plan</stringProp>
@@ -1301,7 +1557,7 @@ vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
       </hashTree>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="-----------------------Test fragments-----------------------" enabled="false"/>
       <hashTree/>
-      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_1.LogOn">
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="TF_1.LogOn" enabled="true">
         <stringProp name="TestPlan.comments">Авторизация</stringProp>
       </TestFragmentController>
       <hashTree>
@@ -1311,7 +1567,9 @@ vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1.Auth" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1.Auth">
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <intProp name="HTTPSampler.concurrentPool">2</intProp>
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
@@ -1343,11 +1601,12 @@ vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2-00. Main page" enabled="true">
             <stringProp name="TestPlan.comments">Выбор id_catalog на Main page</stringProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <intProp name="HTTPSampler.concurrentPool">2</intProp>
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
             <stringProp name="HTTPSampler.path">/</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
@@ -1367,21 +1626,21 @@ vars.put(&quot;counter_del&quot;, counter_del as String);</stringProp>
               <stringProp name="TestPlan.comments">Выбор id_catalog на Main page</stringProp>
             </BoundaryExtractor>
             <hashTree/>
-            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor. Выбор id_catalog" enabled="true">
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostPro. Выбор id_catalog" enabled="true">
               <stringProp name="cacheKey">true</stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="script">log.info(&quot;--------------------------------------------------&quot;)
 // Получаем значение переменной id_catalog_matchNr из переменных (vars)
 def matchNr = vars.get(&quot;id_catalog_matchNr&quot;)
-log.info(&quot;| Значение переменной id_catalog_matchNr=&quot; + matchNr)
+//log.info(&quot;| Значение переменной id_catalog_matchNr=&quot; + matchNr)
 
 // Генерируем случайное число в диапазоне от 1 до значения переменной id_catalog_matchNr
 def minRandomValue = 1
 def maxRandomValue = Integer.parseInt(matchNr)
 def random = new Random()
 def randomValue = minRandomValue + random.nextInt(maxRandomValue)
-log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
+//log.info(&quot;| Сгенерированное случайное число от 1 до &quot; + maxRandomValue + &quot;: &quot; + randomValue)
 
 // Body &lt;a class=&quot;cc_block&quot; id=&quot;icon14&quot; href=&quot;/catalog/kazy_iz_koniny/&quot; &gt; 		&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;b&gt;Казы из конины&lt;/b&gt;&lt;font&gt;0 наименований&lt;/font&gt;
 // Body &lt;a class=&quot;cc_block&quot; id=&quot;icon5&quot; href=&quot;/catalog/myasnye-delikatesy/&quot; &gt; 		&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;b&gt;Мясные деликатесы&lt;/b&gt;&lt;font&gt;35 наименований&lt;/font&gt;
@@ -1393,7 +1652,7 @@ if (randomValue == 14) {
 // Получаем значение переменной id_catalog_N, где N - сгенерированное случайное число
 def id_catalog = vars.get(&quot;id_catalog_&quot; + String.valueOf(randomValue))
 log.info(&quot;| Значение переменной id_catalog_&quot; + randomValue + &quot;: &quot; + id_catalog)
-log.info(&quot;--------------------------------------------------&quot;)
+//log.info(&quot;--------------------------------------------------&quot;)
 
 vars.put(&quot;id_catalog&quot;, id_catalog as String);</stringProp>
               <stringProp name="scriptLanguage">groovy</stringProp>
@@ -1428,7 +1687,8 @@ vars.put(&quot;id_catalog&quot;, id_catalog as String);</stringProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2-01. Catalog page" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2-01. Catalog page">
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1464,7 +1724,7 @@ vars.put(&quot;id_catalog&quot;, id_catalog as String);</stringProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2-02. Кнопка Купить (HTTP Request)" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2-02. Кнопка Купить (HTTP Request)">
             <stringProp name="TestPlan.comments">//{&quot;strID&quot;:${id_goods_buy_mp_${__Random(1,${__int(${id_goods_buy_mp_matchNr})})}},&quot;strCOMP&quot;:&quot;&quot;,&quot;strIDSTORE&quot;:&quot;&quot;}
 
 ?SECTION_CODE=myasnye-delikatesy&amp;TRASH=
@@ -1527,11 +1787,13 @@ vars.put(&quot;id_catalog&quot;, id_catalog as String);</stringProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2-03. Кнопка Купить (HTTP Request)" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2-03. Кнопка Купить (HTTP Request)">
             <stringProp name="TestPlan.comments">//{&quot;strID&quot;:${id_goods_buy_mp_${__Random(1,${__int(${id_goods_buy_mp_matchNr})})}},&quot;strCOMP&quot;:&quot;&quot;,&quot;strIDSTORE&quot;:&quot;&quot;}
 
 ?SECTION_CODE=myasnye-delikatesy&amp;TRASH=
 </stringProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <intProp name="HTTPSampler.concurrentPool">2</intProp>
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1589,7 +1851,9 @@ vars.put(&quot;id_catalog&quot;, id_catalog as String);</stringProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Переход к корзине (HTTP Request)" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Переход к корзине (HTTP Request)">
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <intProp name="HTTPSampler.concurrentPool">2</intProp>
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1674,8 +1938,10 @@ log.info(&quot;--------------------------------------------------&quot;)
 vars.put(&quot;del_basket_id&quot;, del_basket_id as String);</stringProp>
             </JSR223Sampler>
             <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4-01.Удалить id из корзины (HTTP Request)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4-01.Удалить id из корзины (HTTP Request)">
               <stringProp name="TestPlan.comments">{&quot;id&quot;:${del_basket_id}}</stringProp>
+              <boolProp name="HTTPSampler.image_parser">true</boolProp>
+              <intProp name="HTTPSampler.concurrentPool">2</intProp>
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">443</stringProp>
               <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1708,8 +1974,10 @@ vars.put(&quot;del_basket_id&quot;, del_basket_id as String);</stringProp>
             <stringProp name="TestPlan.comments">Проверка наличия остатка товара в корзине перед удалением id товара из корзины</stringProp>
           </IfController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4-03.Удалить id из корзины (HTTP Request)" enabled="true">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="4-03.Удалить id из корзины (HTTP Request)">
               <stringProp name="TestPlan.comments">{&quot;id&quot;:${del_basket_id}}</stringProp>
+              <boolProp name="HTTPSampler.image_parser">true</boolProp>
+              <intProp name="HTTPSampler.concurrentPool">2</intProp>
               <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
               <stringProp name="HTTPSampler.port">443</stringProp>
               <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -1728,7 +1996,7 @@ vars.put(&quot;del_basket_id&quot;, del_basket_id as String);</stringProp>
               <stringProp name="parameters"></stringProp>
               <stringProp name="filename"></stringProp>
               <stringProp name="cacheKey">true</stringProp>
-              <stringProp name="script">// Второй блок кода (JSR223 Sampler) - обновление значения переменной &quot;id_goods_basket_after_del_matchNr&quot;
+              <stringProp name="script">// Второй блок кода (JSR223_4-03-2_ counter_afte_del) - обновление значения переменной &quot;id_goods_basket_after_del_matchNr&quot;
 def id_goods_basket_after_del_matchNr = 
 (vars.get(&quot;id_goods_basket_after_del_matchNr&quot;) == null) ? 
     Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;)) - 1 : 
@@ -1806,7 +2074,9 @@ if (Integer.parseInt(vars.get(&quot;id_goods_basket_befo_del_matchNr&quot;)) &gt
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="5.Выход из системы" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="5.Выход из системы">
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <intProp name="HTTPSampler.concurrentPool">2</intProp>
             <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
             <stringProp name="HTTPSampler.port">443</stringProp>
             <stringProp name="HTTPSampler.protocol">https</stringProp>
